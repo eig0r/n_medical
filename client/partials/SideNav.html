@@ -1,0 +1,32 @@
+<template name="SideNav">
+  {{#if isInRole 'admin'}}
+<nav class="side-nav">
+  <ul>
+    <li><a href="/Stock"><i class="fa fa-medkit" aria-hidden="true"></i>Stock </a></li>
+    <li><a href="/sallery"><i class="fa fa-pie-chart" aria-hidden="true"></i>Financial </a></li>
+    <li><a href="/setting"><i class="fa fa-cog fa-2x" aria-hidden="true"></i>Setting </a></li>
+  </ul>
+</nav>
+{{/if}}
+
+  {{#if isInRole 'nurse'}}
+<nav class="side-nav">
+  <ul>
+    <li><a href="/PatientDetails/{{mdata._id}}"><i class="fa fa-info" aria-hidden="true"></i>Info</a></li>
+    <li><a href="/mangment"><i class="fa fa-heartbeat" aria-hidden="true"></i>Mangment</a></li>
+  </ul>
+</nav>
+{{/if}}
+
+  {{#if isInRole 'doctor'}}
+  <nav class="side-nav">
+
+  </nav>
+{{/if}}
+
+{{#if isInRole 'reservation'}}
+<nav class="side-nav">
+
+</nav>
+{{/if}}
+</template>
