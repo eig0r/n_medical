@@ -1,0 +1,46 @@
+<template name="dr_req">
+
+
+
+   <p><label><h4>Request for Today :</h4> </label> {{reservPatients.count}}</p>
+      {{# each reservPatients }}
+      {{#if editing}}
+     <div class="panel panel-primary">
+        <div class="panel-heading"><label>Req. Time : </label> {{DR_Request_time}}</div>
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+     <p><label>name: </label> {{Dep}}</p>
+
+      <p><label>nurse comment: </label> {{nurse_comment}}</p>
+     <p><label>Status : </label> <input type="text" id="editeitemstatus" value="{{status}}" enabled> </p>
+
+     <button class="deleteItem btn btn-primary pull-right">Delete</button>
+     <button class="editItem btn btn-primary pull-right">Edit</button>
+
+
+         </div>
+     </div>
+
+     </div>
+     {{else}}
+     <div class="panel panel-primary">
+          <div class="panel-heading">{{createdAt}}</div>
+          <div class="panel-body">
+            <div class="col-xs-12">
+                  <p><label>Requester: </label> {{Dep}}</p>
+                
+                  <p><label>Status  : </label>  {{status}}</p>
+                  <p><label>comment: </label> {{comment}}</p>
+                  <button class="editItem btn btn-primary pull-left">Done</button>
+                  <span class="pull-right"><a href="/PatientDetails/{{patientId}}" class="btn btn-primary">Details </a></span>
+            </div>
+          </div>
+     </div>
+
+     {{/if}}
+     {{/each}}
+
+
+  </template>

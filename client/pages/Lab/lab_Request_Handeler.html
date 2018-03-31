@@ -1,0 +1,67 @@
+<template name="lab_Request_Handeler">
+  <nav class="side-nav">
+    <ul>
+      <li><a href="/PatientDetails"><i class="fa fa-info" aria-hidden="true"></i>Patients</a></li>
+
+    </ul>
+  </nav>
+
+
+
+  <div class="panel panel-primary">
+
+
+     <div class="panel-body">
+{{#each getlabReq}}
+          <p><label>Date :{{date}} </label> </p>
+ <p><label>Name :{{patient_name}} </label> </p>
+            <p><label>Requested By : {{DrName}}</label> </p>
+            <input type="text" class="form-control" id="patientId" name="patientId" value="{{patientId}}" hidden="true"  >
+            <input type="text" class="form-control" id="patient_name" name="patient_name" value="{{patient_name}}" hidden="true"  >
+
+{{/each}}
+          {{>lab_tec_view}}
+
+  </div>
+
+        <div class="panel-body">
+                <p><label>Staus: </label> </p>
+                <select name="type" id="lab_req_status" class="  form-control input-lg"  >
+                   <option >Done</option>
+                </select>
+                  <p><label>Comment: </label> </p>
+                  <input type="text" class="form-control" id="comment" name="comment"   >
+
+                <button  id="add_Lab_Request" class="add_Lab_Request btn-primary pull-right" >Add</button>
+       </div>
+
+
+
+  <div class="panel-body">
+<form class="add-image-info" >
+<div class="form-group">
+<label>Labs</label>
+<input type="file"  capture="camera" class="uploadFileButton" id="photo" name="photo">
+</div>
+<button type="submit" class="btn btn-primary">Add</button>
+</form>
+  </div>
+  </div>
+  {{# each mdata}}
+  <div class="panel panel-primary">
+ <p><label>Date : </label> {{createdAt}}</p>
+
+     <div class="panel-body">
+       <div class="col-xs-8">
+         <div class="pull-left"><img class="img-thumbnail"  src="{{imageUrl}}"  /></div>
+       </div>
+       <div class="col-xs-8">
+  <button class="deleteItem">Delete</button>
+
+  </div>
+
+  </div>
+
+  </div>
+  {{/each}}
+  </template>

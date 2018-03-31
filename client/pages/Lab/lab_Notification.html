@@ -1,0 +1,104 @@
+<template name="lab_Notification">
+
+{{#if isInRole 'lab_tec'}}
+  <nav class="side-nav">
+    <ul>
+      <li><a href="/PatientDetails"><i class="fa fa-info" aria-hidden="true"></i>Patients</a></li>
+
+    </ul>
+  </nav>
+
+
+
+  <table class="table table-bordered table-hover">
+      <thead>
+
+        <tr>
+          <th>Date Requested</th>
+          <th>Patient</th>
+          <th>Requested By</th>
+
+          <th>Status</th>
+          <th>Notes</th>
+          <th>Actions</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+  {{# each getlabReq}}
+              <tr>
+                <td>
+                  {{date}}
+                </td>
+              <td>
+              {{patient_name}}
+              </td>
+              <td>
+              {{DrName}}
+              </td>
+
+              <td>
+                {{status}}
+              </td>
+              <td>
+                {{lab_notes}}
+              </td>
+              <td>
+          <a href="/lab_Request_Handeler/{{_id}}" class="btn btn-block btn-primary" margin-bottom= "10px">Edite</a>
+              </td>
+
+
+              </tr>
+{{/each}}
+      </tbody>
+  </table>
+
+  {{/if}}
+{{#if isInRole 'Attendant_surgent'}}
+<table class="table table-bordered table-hover">
+    <thead>
+
+      <tr>
+        <th>Date </th>
+        <th>Patient</th>
+        <th>Requested By</th>
+
+        <th>Status</th>
+        <th>Notes</th>
+        <th>Actions</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+{{# each getlabReqpatient}}
+            <tr>
+              <td>
+                {{date}}
+              </td>
+            <td>
+            {{patient_name}}
+            </td>
+            <td>
+            {{DrName}}
+            </td>
+
+            <td>
+              {{status}}
+            </td>
+            <td>
+              {{lab_notes}}
+            </td>
+            <td>
+        <a href="/lab/" class="btn btn-block btn-primary" margin-bottom= "10px">Edite</a>
+            </td>
+
+
+            </tr>
+{{/each}}
+    </tbody>
+</table>
+{{/if}}
+
+  </template>

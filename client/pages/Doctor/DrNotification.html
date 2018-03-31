@@ -1,0 +1,105 @@
+<template name="DrNotification">
+
+{{#if isInRole 'Attendant_surgent'}}
+   <p><label><h4>Reservation Today :</h4> </label> {{Surgry_Patient_Count.count}}</p>
+      {{# each Attendant_Dr }}
+      {{#if editing}}
+     <div class="panel panel-primary">
+        <div class="panel-heading">{{name}}</div>
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+     <p><label>Date : </label> {{date}}</p>
+     <p><label>Complain : </label> {{complain}}</p>
+     <p><label>Status : </label> <input type="text" id="editeitemstatus" value="{{status}}" enabled> </p>
+
+     <button class="deleteItem btn btn-primary pull-right">Delete</button>
+     <button class="editItem btn btn-primary pull-right">Edit</button>
+
+
+         </div>
+     </div>
+
+     </div>
+     {{else}}
+     <div class="panel panel-primary">
+        <div class="panel-heading">
+
+          {{name}}
+
+          </div>
+
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+            <p><label>Date : </label> {{date}}</p>
+            <p><label>Complain : </label> {{complain}}</p>
+      <p>  <label>Status  : </label>  {{status}}</p>
+
+      <span class="pull-right"><a href="/PatientDetails/{{patientId}}" id="details" class="details btn  btn-primary">Details </a></span>
+
+
+         </div>
+     </div>
+
+     </div>
+     {{/if}}
+     {{/each}}
+
+{{/if}}
+
+
+{{#if isInRole 'er_Docotr'}}
+   <p><label><h4>Number of Patients :</h4> </label>  {{ER_Patient_Count.count}}</p>
+      {{# each Er_Dr }}
+      {{#if editing}}
+     <div class="panel panel-primary">
+        <div class="panel-heading">{{name}}</div>
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+            <p><label>Date : </label> {{date}}</p>
+            <p><label>Complain : </label> {{complain}}</p>
+     <p><label>Status : </label> <input type="text" id="editeitemstatus" value="{{status}}" enabled> </p>
+
+     <button class="deleteItem btn btn-primary pull-right">Delete</button>
+     <button class="editItem btn btn-primary pull-right">Edit</button>
+
+
+         </div>
+     </div>
+
+     </div>
+     {{else}}
+     <div class="panel panel-primary">
+        <div class="panel-heading">
+
+          {{name}}
+
+          </div>
+
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+            <p><label>Date : </label> {{date}}</p>
+            <p><label>Complain : </label> {{complain}}</p>
+      <p>  <label>Status  : </label>  {{status}}</p>
+
+      <span class="pull-right"><a href="/PatientDetails/{{patientId}}" id="details" class="details btn  btn-primary">Details </a></span>
+
+
+         </div>
+     </div>
+
+     </div>
+     {{/if}}
+     {{/each}}
+
+{{/if}}
+
+
+  </template>

@@ -1,0 +1,224 @@
+<template name="lab_tec_view">
+
+{{#with getlabReq}}
+         <div class="form-group">
+
+         <div class="panel-heading">
+           <h4 class="panel-title">
+             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Lab Request</a>
+           </h4>
+         </div>
+         <div id="collapse1" class="panel-collapse collapse off">
+         <form>
+         <div class="panel-heading">
+         <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse01">الكيمياء الأكلينيكية </a>
+         </h4>
+         </div>
+         <div id="collapse01" class="panel-collapse collapse off">
+
+         <table class="table table-bordered table-hover">
+         <tbody>
+         <tr>
+         <td align="center"><label  ><input type="checkbox" name="FBSUGAR" class="radio-inline col-xs-12" value="FBSUGAR" {{FBSUGAR 'FBSUGAR'}} >F.B. Sugar</label></td>
+         <td align="center"><label><input type="checkbox" name="PPBSugar"  class="radio-inline col-xs-12" value="PPBSugar" {{PPBSugar 'PPBSugar'}}>P.P.B.Sugar</label></td>
+         <td align="center"><label><input type="checkbox" name="RandumBSugar"  class="radio-inline col-xs-12" value="RandumBSugar" {{RandumBSugar 'RandumBSugar'}}>Randum . B. Sugar</label></td>
+
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="Urea" class="radio-inline col-xs-12" value="Urea" {{Urea 'Urea'}}>Urea</label></td>
+         <td align="center"><label><input type="checkbox" name="Creatinine"  class="radio-inline col-xs-12" value="Creatinine" {{Creatinine 'Creatinine'}}>Creatinine</label></td>
+         <td align="center"><label><input type="checkbox" name="CreatinineClearance"  class="radio-inline col-xs-12" value="CreatinineClearance" {{CreatinineClearance 'CreatinineClearance'}}>Creatinine Clearance</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="UricAcid" class="radio-inline col-xs-12" value="UricAcid" {{UricAcid 'UricAcid'}}>Uric Acid</label></td>
+         <td align="center"><label><input type="checkbox" name="CholesterolTotal"  class="radio-inline col-xs-12" value="CholesterolTotal" {{CholesterolTotal 'CholesterolTotal'}}>Cholesterol Total</label></td>
+         <td align="center"><label><input type="checkbox" name="HDLCholesterol"  class="radio-inline col-xs-12" value="HDLCholesterol" {{HDLCholesterol 'HDLCholesterol'}}>H D L Cholesterol</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label><input type="checkbox" name="LDLCholesterol"  class="radio-inline col-xs-12" value="LDLCholesterol" {{LDLCholesterol 'LDLCholesterol'}}>L.D L Cholesterol</label></td>
+         <td align="center"><label><input type="checkbox" name="Triglycerides"  class="radio-inline col-xs-12" value="Triglycerides" {{Triglycerides 'Triglycerides'}}>Triglycerides</label></td>
+         <td align="center"><label><input type="checkbox" name="Calcium"  class="radio-inline col-xs-12" value="Calcium" {{Calcium 'Calcium'}}>Calcium</label></td>
+         </tr>
+
+         <tr>
+         <td align="center"><label><input type="checkbox" name="Phosphorus"  class="radio-inline col-xs-12" value="Phosphorus" {{Phosphorus 'Phosphorus'}}>Phosphorus</label></td>
+         <td align="center"><label><input type="checkbox" name="NaK"  class="radio-inline col-xs-12" value="NaK" {{NaK 'NaK'}}>Na & K</label></td>
+         <td align="center"><label><input type="checkbox" name="TotalBilirubin"  class="radio-inline col-xs-12" value="TotalBilirubin" {{TotalBilirubin 'TotalBilirubin'}}>Total Bilirubin</label></td>
+         </tr>
+
+         <tr>
+         <td align="center"><label><input type="checkbox" name="DirectBilirubin"  class="radio-inline col-xs-12" value="DirectBilirubin" {{DirectBilirubin 'DirectBilirubin'}}>Direct Bilirubin</label></td>
+         <td align="center"><label><input type="checkbox" name="ALT"  class="radio-inline col-xs-12" value="ALT">A L T </label></td>
+         <td align="center"><label><input type="checkbox" name="AST"  class="radio-inline col-xs-12" value="AST ">A S T</label></td>
+         </tr>
+
+         <tr>
+         <td align="center"><label><input type="checkbox" name="AIKPase"  class="radio-inline col-xs-12" value="AIKPase">AIK Pase</label></td>
+         <td align="center"><label><input type="checkbox" name="GGT"  class="radio-inline col-xs-12" value="GGT">G G T </label></td>
+         <td align="center"><label><input type="checkbox" name="TotalProteins"  class="radio-inline col-xs-12" value="TotalProteins ">Total Proteins</label></td>
+         </tr>
+
+         <tr>
+         <td align="center"><label><input type="checkbox" name="Albumin"  class="radio-inline col-xs-12" value="Albumin">Albumin</label></td>
+         <td align="center"><label><input type="checkbox" name="AGRatio"  class="radio-inline col-xs-12" value="AGRatio">A/G Ratio</label></td>
+         <td align="center"><label><input type="checkbox" name="Amylase"  class="radio-inline col-xs-12" value="Amylase "> Amylase</label></td>
+         </tr>
+
+
+
+         <tr>
+         <td align="center"><label><input type="checkbox" name="LDH"  class="radio-inline col-xs-12" value="LDH">L D H</label></td>
+         <td align="center"><label><input type="checkbox" name="CPK"  class="radio-inline col-xs-12" value="CPK">C.P.K</label></td>
+         <td align="center"><label><input type="checkbox" name="CKMB"  class="radio-inline col-xs-12" value="CKMB "> C. K. M. B</label></td>
+         <td align="center"><label><input type="checkbox" name="Acidpase"  class="radio-inline col-xs-12" value="Acidpase ">Acid pase</label></td>
+
+         </tr>
+
+         </tbody>
+         </table>
+         </div>
+         </form>
+         <p><label></label></p>
+         <form>
+         <div class="panel-heading">
+         <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse02">امراض الدم</a>
+         </h4>
+         </div>
+         <div id="collapse02" class="panel-collapse collapse off">
+
+         <table class="table table-bordered table-hover">
+         <tbody>
+         <tr>
+         <td align="center"><label  ><input type="checkbox" name="Hbperc" class="radio-inline col-xs-12" value="Hbperc"  >Hb %</label></td>
+         <td align="center"><label><input type="checkbox" name="ESR"  class="radio-inline col-xs-12" value="ESR">E S .R</label></td>
+         <td align="center"><label><input type="checkbox" name="Bloodpicture"  class="radio-inline col-xs-12" value="Bloodpicture">Blood picture</label></td>
+
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="Reticulocytes" class="radio-inline col-xs-12" value="Reticulocytes">Reticulocytes</label></td>
+         <td align="center"><label><input type="checkbox" name="Platelets"  class="radio-inline col-xs-12" value="Platelets">Platelets</label></td>
+         <td align="center"><label><input type="checkbox" name="Bloodgroup"  class="radio-inline col-xs-12" value="Bloodgroup">Blood group</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="RhFactor" class="radio-inline col-xs-12" value="RhFactor">Rh Factor</label></td>
+         <td align="center"><label><input type="checkbox" name="DirectCoombs"  class="radio-inline col-xs-12" value="DirectCoombs">Direct Coombs</label></td>
+         <td align="center"><label><input type="checkbox" name="IndirectCoombs"  class="radio-inline col-xs-12" value="IndirectCoombs">Indirect Coombs</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label><input type="checkbox" name="OsmoticFragility"  class="radio-inline col-xs-12" value="OsmoticFragility">Osmotic Fragility</label></td>
+         <td align="center"><label><input type="checkbox" name="G6PD"  class="radio-inline col-xs-12" value="G6PD">G.6.P.D</label></td>
+         <td align="center"><label><input type="checkbox" name="BleedingTime"  class="radio-inline col-xs-12" value="BleedingTime">Bleeding Time</label></td>
+
+        </tr>
+        <tr>
+        <td align="center"><label><input type="checkbox" name="ClottingTime"  class="radio-inline col-xs-12" value="ClottingTime">Clotting Time</label></td>
+        <td align="center"><label><input type="checkbox" name="ProthrombinTime"  class="radio-inline col-xs-12" value="ProthrombinTime">Prothrombin Time</label></td>
+        <td align="center"><label><input type="checkbox" name="ApTT"  class="radio-inline col-xs-12" value="ApTT">Ap.TT</label></td>
+
+       </tr>
+
+       <tr>
+       <td align="center"><label><input type="checkbox" name="Serumiron"  class="radio-inline col-xs-12" value="Serumiron">Serum iron</label></td>
+       <td align="center"><label><input type="checkbox" name="TIBC"  class="radio-inline col-xs-12" value="TIBC">T I B C</label></td>
+       <td align="center"><label><input type="checkbox" name="Hbelectrophcresis"  class="radio-inline col-xs-12" value="Hbelectrophcresis">Hb.electrophcresis</label></td>
+
+      </tr>
+         </tbody>
+         </table>
+         </div>
+         </form>
+
+         <p><label></label></p>
+         <form>
+         <div class="panel-heading">
+         <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse03">بكتريولوجي و سيرولوجي</a>
+         </h4>
+         </div>
+         <div id="collapse03" class="panel-collapse collapse off">
+
+         <table class="table table-bordered table-hover">
+         <tbody>
+         <tr>
+         <td align="center"><label  ><input type="checkbox" name="CultureSensitivity" class="radio-inline col-xs-12" value="CultureSensitivity"  >Culture & Sensitivity</label></td>
+         <td align="center"><label><input type="checkbox" name="For"  class="radio-inline col-xs-12" value="For">For.</label></td>
+         <td align="center"><label><input type="checkbox" name="BloodCulture"  class="radio-inline col-xs-12" value="BloodCulture">Blood Culture</label></td>
+
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="FilmForTB" class="radio-inline col-xs-12" value="FilmForTB">Film For T.B</label></td>
+         <td align="center"><label><input type="checkbox" name="CultureforTB"  class="radio-inline col-xs-12" value="CultureforTB">Culture for T.B</label></td>
+         <td align="center"><label><input type="checkbox" name="Widal"  class="radio-inline col-xs-12" value="Widal">Widal</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="Brucella" class="radio-inline col-xs-12" value="Brucella">Brucella</label></td>
+         <td align="center"><label><input type="checkbox" name="RheumatoidF"  class="radio-inline col-xs-12" value="RheumatoidF">Rheumatoid. F.</label></td>
+         <td align="center"><label><input type="checkbox" name="ASOT"  class="radio-inline col-xs-12" value="ASOT">AS.O.T</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label><input type="checkbox" name="CRProtein"  class="radio-inline col-xs-12" value="CRProtein">C.R.Protein</label></td>
+         <td align="center"><label><input type="checkbox" name="ANA"  class="radio-inline col-xs-12" value="ANA">A N A</label></td>
+         <td align="center"><label><input type="checkbox" name="MonospostTest"  class="radio-inline col-xs-12" value="MonospostTest">Monospost Test</label></td>
+
+         </tr>
+         <tr>
+         <td align="center"><label><input type="checkbox" name="RPR"  class="radio-inline col-xs-12" value="R.P.R">RPR</label></td>
+         <td align="center"><label><input type="checkbox" name="HIV"  class="radio-inline col-xs-12" value="HIV">H I V</label></td>
+         <td align="center"><label><input type="checkbox" name="HCVAB"  class="radio-inline col-xs-12" value="HCVAB">H C V Ab</label></td>
+
+         <td align="center"><label><input type="checkbox" name="HBSAG"  class="radio-inline col-xs-12" value="HBSAG">H Bs Ag</label></td>
+
+         </tr>
+         </tbody>
+         </table>
+         </div>
+         </form>
+
+         <p><label></label></p>
+         <form>
+         <div class="panel-heading">
+         <h4 class="panel-title">
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapse04">تحاليل روتينيه</a>
+         </h4>
+         </div>
+         <div id="collapse04" class="panel-collapse collapse off">
+
+         <table class="table table-bordered table-hover">
+         <tbody>
+         <tr>
+         <td align="center"><label  ><input type="checkbox" name="urineanalysis" class="radio-inline col-xs-12" value="urineanalysis"  >urine analysis</label></td>
+         <td align="center"><label><input type="checkbox" name="Stoolanalysis"  class="radio-inline col-xs-12" value="Stoolanalysis">Stool analysis</label></td>
+         <td align="center"><label><input type="checkbox" name="Semenanalysis"  class="radio-inline col-xs-12" value="Semenanalysis">Semen analysis</label></td>
+
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="Pregnancytest" class="radio-inline col-xs-12" value="Pregnancytest">Pregnancy test</label></td>
+         <td align="center"><label><input type="checkbox" name="BenceJonesP"  class="radio-inline col-xs-12" value="BenceJonesP">Bence. Jones.P</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label ><input type="checkbox" name="Proteinelectrophcresis" class="radio-inline col-xs-12" value="Proteinelectrophcresis">Protein electrophcresis</label></td>
+         <td align="center"><label><input type="checkbox" name="Caffeine"  class="radio-inline col-xs-12" value="Caffeine">Caffeine</label></td>
+         <td align="center"><label><input type="checkbox" name="lipoproteinelec"  class="radio-inline col-xs-12" value="lipoproteinelec">lipoprotein elec</label></td>
+         </tr>
+         <tr>
+         <td align="center"><label><input type="checkbox" name="T3T4"  class="radio-inline col-xs-12" value="T3T4">T3 & T4</label></td>
+         <td align="center"><label><input type="checkbox" name="Bloodgases"  class="radio-inline col-xs-12" value="Bloodgases">Blood gases</label></td>
+
+         </tr>
+         </tbody>
+         </table>
+         </div>
+
+         </form>
+
+
+       </div>
+
+
+
+
+         </div>
+         {{/with}}
+</template>
