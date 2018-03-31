@@ -1,0 +1,29 @@
+<template name="followup">
+  <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+     <th> الأمر</th>
+
+          <th>متابعة التنفيذ </th>
+
+        </tr>
+      </thead>
+      <tbody>
+          {{#each m_FollowUp}}
+              <tr>
+                <td>
+                 <input type="text" id="medication" value="{{ medication }}">
+                </td>
+              <td>
+                   <input type="text" id="medicationComment" value="{{ createdAt }}">
+              </td>
+
+
+
+
+              </tr>
+          {{/each}}
+      </tbody>
+  </table>
+
+</template>

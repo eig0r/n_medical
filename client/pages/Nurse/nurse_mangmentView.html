@@ -1,0 +1,89 @@
+<template name="nurse_mangmentView">
+
+  <legend>
+  <a data-toggle="collapse" class="btn btn-defult" data-parent="#accordion" href="#collapse002">أوامر الطبيب</a>
+  <a data-toggle="collapse" class="btn btn-defult" data-parent="#accordion" href="#collapse003">تحاليل مطلوبه</a>
+  <a data-toggle="collapse" class="btn btn-defult" data-parent="#accordion" href="#collapse004">طلب النائب المقيم</a>
+  <a data-toggle="collapse" class="btn btn-defult" data-parent="#accordion" href="#collapse005">تسجيل علامات حيويه</a>
+  </legend>
+  <nav class="side-nav">
+    <ul>
+      <li><a href="/PatientDetails/{{mdata._id}}"><i class="fa fa-id-card-o" aria-hidden="true"></i>Info</a></li>
+      <li><a href="/mangment"><i class="fa fa-heartbeat" aria-hidden="true"></i>Mangment</a></li>
+
+
+    </ul>
+  </nav>
+
+  <div id="collapse002" class="panel-collapse collapse off">
+    <div class="panel-body">
+    <form class="update-patient-info" >
+      <div class="form-group">
+      <label>التشخيص</label>
+      <input type="text" class="form-control" id="procedure" name="Dignoses" value="{{mdata.Dignoses}}" >
+      </div>
+      <div class="form-group">
+    </div>
+    </form>
+      <table class="table table-bordered table-hover">
+          <thead><tr><th> الأمر</th><th>أوقات التنفيذ</th></tr></thead>
+          <tbody>
+              {{#each medicationtview}}
+                  <tr>
+                    <td>
+                     <input type="text" id="medication" value="{{ medication }}">
+                    </td>
+                  <td>
+                       <input type="text" id="medicationComment" value="{{ medicationComment }}">
+                  </td>
+                  <td>
+                   <button type="submit" class="save btn-primary">تـم</button>
+                  </td>
+                  </tr>
+
+              {{/each}}
+              <button  id="add" class="add btn-primary"  disabled>حفـظ</button>
+          </tbody>
+      </table>
+
+     {{>followup}}
+
+    <p><label></label></p>
+  </div>
+  </div>
+
+
+  <div id="collapse003" class="panel-collapse collapse off">
+
+  <div class="panel-body">
+
+
+    {{>lab_tec_view_nurse}}
+
+
+
+  </div>
+  </div>
+
+  <div id="collapse004" class="panel-collapse collapse off">
+  <div class="panel-body">
+
+
+    <p><label>النائب المقيم</label></p>
+         <input type="text" id="nurse_comment" >
+    <button  id="dr_req" class="dr_req add btn-primary"  >طلب</button>
+
+  </div>
+  </div>
+
+  <div id="collapse005" class="panel-collapse collapse off">
+  {{>Patient_sur_nurse}}
+  </div>
+
+
+
+
+
+
+
+</template>

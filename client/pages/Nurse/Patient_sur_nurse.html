@@ -1,0 +1,169 @@
+<template name="Patient_sur_nurse">
+
+    {{#if isInRole 'reservation'}}
+  <h1>تسجيل العلامات الحيويه</h1>
+
+
+
+  <div class="panel-body">
+
+    <div class="col-xs-4">
+  <label>نبض</label>
+  <input type="text" class="form-control"  id="pulse" name="pulse" >
+  </div>
+  <div class="col-xs-4">
+<label>ضغط</label>
+<input type="text" class="form-control"  id="pressure" name="pressure" >
+</div>
+<div class="col-xs-4">
+<label>حراره</label>
+<input type="text" class="form-control"  id="temp" name="temp" >
+</div>
+<div class="col-xs-4">
+<label>مستوي السكر بالدم</label>
+<input type="text" class="form-control"  id="sugre" name="sugre" >
+</div>
+<div class="col-xs-4">
+<label>معدل التنفس</label>
+<input type="text" class="form-control"  id="press" name="press" >
+</div>
+  <button  id="addAS" class="addAS add btn-primary"  >حفـظ</button>
+    <p><label></label></p>
+
+
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+       <th> نبض</th>
+       <th> ضغط</th>
+       <th> حراره</th>
+       <th> مستوي السكر بالدم</th>
+       <th> معدل التنفس</th>
+        <th>التمريض</th>
+        <th>التاريخ</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each signs_view}}
+                <tr>
+                  <td> {{pulse}}</td>
+                  <td> {{pressure}}</td>
+                  <td> {{temp}} </td>
+                  <td> {{sugre}}</td>
+                  <td>{{press}}  </td>
+                    <td>{{nurse_name}}  </td>
+                      <td>{{date}}  </td>
+                </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+  </div>
+
+  {{/if}}
+
+
+      {{#if isInRole 'Surgical_Nurse'}}
+    <h1>تسجيل العلامات الحيويه</h1>
+
+
+
+    <div class="panel-body">
+
+      <div class="col-xs-4">
+    <label>نبض</label>
+    <input type="text" class="form-control"  id="pulse" name="pulse" >
+    </div>
+    <div class="col-xs-4">
+  <label>ضغط</label>
+  <input type="text" class="form-control"  id="pressure" name="pressure" >
+  </div>
+  <div class="col-xs-4">
+  <label>حراره</label>
+  <input type="text" class="form-control"  id="temp" name="temp" >
+  </div>
+  <div class="col-xs-4">
+  <label>مستوي السكر بالدم</label>
+  <input type="text" class="form-control"  id="sugre" name="sugre" >
+  </div>
+  <div class="col-xs-4">
+  <label>معدل التنفس</label>
+  <input type="text" class="form-control"  id="press" name="press" >
+  </div>
+    <button  id="addAS" class="addAS add btn-primary"  >حفـظ</button>
+      <p><label></label></p>
+
+
+      <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+         <th> نبض</th>
+         <th> ضغط</th>
+         <th> حراره</th>
+         <th> مستوي السكر بالدم</th>
+         <th> معدل التنفس</th>
+          <th>التمريض</th>
+          <th>التاريخ</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each signs_view}}
+                  <tr>
+                    <td> {{pulse}}</td>
+                    <td> {{pressure}}</td>
+                    <td> {{temp}} </td>
+                    <td> {{sugre}}</td>
+                    <td>{{press}}  </td>
+                      <td>{{nurse_name}}  </td>
+                        <td>{{date}}  </td>
+                  </tr>
+
+              {{/each}}
+          </tbody>
+      </table>
+    </div>
+
+    {{/if}}
+
+
+  {{#if isInRole 'Attendant_surgent'}}
+<h4>العلامـات الحيويـه</h4>
+
+
+<div class="panel-body">
+
+
+
+
+  <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+     <th> نبض</th>
+     <th> ضغط</th>
+     <th> حراره</th>
+     <th> مستوي السكر بالدم</th>
+     <th> معدل التنفس</th>
+      <th>التمريض</th>
+      <th>التاريخ</th>
+        </tr>
+      </thead>
+      <tbody>
+          {{#each signs_view}}
+              <tr>
+                <td> {{pulse}}</td>
+                <td> {{pressure}}</td>
+                <td> {{temp}} </td>
+                <td> {{sugre}}</td>
+                <td>{{press}}  </td>
+                  <td>{{nurse_name}}  </td>
+                    <td>{{date}}  </td>
+              </tr>
+
+          {{/each}}
+      </tbody>
+  </table>
+</div>
+
+{{/if}}
+
+</template>

@@ -1,0 +1,43 @@
+<template name="NurseNotification">
+
+  {{#if isInRole 'admin'}}{{> SideNav}}{{/if}}
+  {{#if isInRole 'reservation'}}
+عدد المرضي :{{ER_Patient_Count.count}}
+      {{# each ER_Patients }}
+      <div class="panel panel-primary">
+         <div class="panel-heading">{{name}}</div>
+         <div class="panel-body">
+           <div class="col-xs-12">
+                <p><label>التاريخ  : </label>  {{date}}</p>
+                <p><label>أسم الطبيب : </label>  {{drName}}</p>
+                <p><label>شكوي المريض  : </label> {{complain}}</p>
+                <label>حالة المريض: </label> {{status}}
+
+         <span class="pull-right"><a href="/Patient_er_nurse/{{patientId}}" class="btn btn-primary">تسجيل العلامات الحيويه </a></span>
+
+          </div>
+      </div>
+      </div>
+      {{/each}}
+      {{/if}}
+
+      {{#if isInRole 'Surgical_Nurse'}}
+    عدد المرضي :{{ER_Patient_Count.count}}
+          {{# each reservPatients }}
+          <div class="panel panel-primary">
+             <div class="panel-heading">{{name}}</div>
+             <div class="panel-body">
+               <div class="col-xs-12">
+                    <p><label>التاريخ  : </label>  {{date}}</p>
+                    <p><label>أسم الطبيب : </label>  {{drName}}</p>
+                    <p><label>شكوي المريض  : </label> {{complain}}</p>
+                    <label>حالة المريض: </label> {{status}}
+
+           <span class="pull-right"><a  href="/PatientDetails/{{patientId}}"  class="btn btn-primary">فتـح</a></span>
+
+              </div>
+          </div>
+          </div>
+          {{/each}}
+          {{/if}}
+</template>

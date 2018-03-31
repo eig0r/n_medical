@@ -1,0 +1,45 @@
+<template name="addReservation">
+
+
+  <form class="update-patient-info" >
+  <div class="form-group">
+
+
+
+    <div class="form-group">
+    <label>الإسـم</label>
+    <input type="text" class="form-control" id="patient_name" name="patient_name" value="{{mdata.name}}">
+    </div>
+    <div class="form-group">
+    <label>التاريخ</label>
+    <input type="text" class="form-control" id="my-datepicker" name="date" >
+    </div>
+    <div class="form-group">
+    <label>الشكوي</label>
+    <input type="text" class="form-control" id="name" name="complain" value="{{mdata.complain}}">
+    </div>
+
+  </div>
+  <div class="form-group">
+  <label>دكتور الاستقبال</label>
+{{>search2}}
+<input type="text" class="form-control" id="dr_Id" name="drId"  value="{{dr.ER_doctor_id}}" hidden="true">
+<button  id="button" class="btn btn-primary pull-left" >تأكيد الحجز</button>
+  </div>
+  <div class="col-xs-4">
+
+  </div>
+
+<p><label></label></p>
+
+
+  <button type="submit" id="save" class="btn btn-primary pull-right" disabled>حفـظ</button>
+  </form>
+  </template>
+
+
+
+  <template name="search2">
+
+    <input type="text" id="searchBox" name="searchBox">
+  </template>

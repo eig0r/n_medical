@@ -1,0 +1,31 @@
+<template name="Nu_Notification">
+
+   <p><label><h4>Patients List:</h4> </label> {{reservPatients.count}}</p>
+      {{# each reservPatients }}
+
+     <div class="panel panel-primary">
+        <div class="panel-heading">
+
+          {{name}}
+
+          </div>
+
+        <div class="panel-body">
+
+
+          <div class="col-xs-12">
+     <p><label>التاريخ : </label> {{createdAt}} </p>
+     <p><label>Type : </label> {{type}}</p>
+      <p>  <label>Status  : </label>  {{status}}</p>
+      <span class="pull-right"><a href="/PatientDetails/{{patientId}}" class="btn btn-primary">فتح </a></span>
+
+
+         </div>
+     </div>
+
+     </div>
+
+     {{/each}}
+
+
+  </template>

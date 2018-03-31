@@ -1,0 +1,77 @@
+
+
+<template name="MangmentHistory">
+
+  {{#if isInRole 'Attendant_surgent'}}
+  <p><label></label></p>
+  <p><label></label></p>
+
+  {{# each mdata2}}
+
+  <div class="panel panel-primary">
+     <div class="panel-heading">{{createdAt}}</div>
+     <div class="panel-body">
+
+       <div class="col-xs-12">
+<p>  <label>Diagnosis</label> {{Dignoses}}</p>
+<p> <label>Doctor name</label> {{Dr_name}}</p>
+   <span class="pull-right"><a href="/mangmentView/{{_id}}" class="btn btn-defult"> View </a></span>
+
+
+      </div>
+  </div>
+
+  </div>
+  {{/each}}
+  {{/if}}
+
+
+  {{#if isInRole 'er_Docotr'}}
+  <p><label></label></p>
+  <p><label></label></p>
+    {{# each mdata2}}
+
+    <div class="panel panel-primary">
+       <div class="panel-heading">{{createdAt}}</div>
+       <div class="panel-body">
+
+         <div class="col-xs-12">
+    <p> <label>Diagnosis</label> {{Dignoses}}</p>
+    <p> <label>Doctor name</label> {{Dr_name}}</p>
+
+     <span class="pull-right"><a href="/mangmentView/{{_id}}" class="btn btn-defult"> View </a></span>
+
+
+        </div>
+    </div>
+
+    </div>
+    {{/each}}
+    {{/if}}
+
+    {{#if isInRole 'Surgical_Nurse'}}
+    <p><label></label></p>
+    <p><label></label></p>
+{{# each mdata2}}
+
+<div class="panel panel-primary">
+   <div class="panel-heading">{{createdAt}}</div>
+   <div class="panel-body">
+
+     <div class="col-xs-12">
+<p><label>التشخيص : </label> {{Dignoses}}</p>
+<p><label>دكتور :</label> {{Dr_name}}</p>
+
+ <span class="pull-right"><a href="/nurse_mangmentView/{{_id}}" class="btn btn-defult"> فتح </a></span>
+
+
+    </div>
+</div>
+
+</div>
+{{/each}}
+{{/if}}
+
+
+
+  </template>

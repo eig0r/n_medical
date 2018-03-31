@@ -1,0 +1,132 @@
+<template name="mangmentView">
+
+  <nav class="side-nav">
+    <ul>
+      <li><a href="/PatientDetails/{{mdata.patientId}}"><i class="fa fa-info" aria-hidden="true"></i>Info</a></li>
+      <li><a href="/clinicalData"><i class="fa fa-stethoscope" aria-hidden="true"></i>Clinical</a></li>
+      <li><a href="/mangment"><i class="fa fa-heartbeat" aria-hidden="true"></i>Mangment</a></li>
+      <li><a href="/gallery"><i class="fa fa-picture-o  " aria-hidden="true"></i>Gallery</a></li>
+    </ul>
+  </nav>
+
+       <form class="update-patient-info" >
+
+
+         <div class="form-group">
+         <label>Dignoses</label>
+         <input type="text" class="form-control" id="procedure" name="Dignoses" value="{{mdata.Dignoses}}" >
+         </div>
+         <div class="form-group">
+         <label>Invistigations</label>
+         {{>lab_Notification}}
+         </div>
+    
+         <div class="form-group">
+
+
+       </div>
+       </form>
+{{#if isInRole 'er_Docotr'}}
+       <table class="table table-bordered table-hover">
+           <thead>
+             <tr>
+               <th>Medication</th>
+               <th>comment</th>
+
+
+             </tr>
+           </thead>
+           <tbody>
+               {{#each medicationtview}}
+                   <tr>
+                     <td>
+                         {{ medication }}
+                     </td>
+                   <td>
+                       {{ medicationComment }}
+                   </td>
+
+
+
+                   </tr>
+               {{/each}}
+           </tbody>
+       </table>
+
+
+       <button type="submit" class="btn btn-primary">Print</button>
+{{/if}}
+
+
+
+
+{{#if isInRole 'Attendant_surgent'}}
+      <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>comment</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+              {{#each medicationtview}}
+                  <tr>
+                    <td>
+                        {{ medication }}
+                    </td>
+                  <td>
+                      {{ medicationComment }}
+                  </td>
+
+
+
+                  </tr>
+              {{/each}}
+          </tbody>
+      </table>
+      <h4>Follow Up </h4>
+      {{>followup}}
+
+      {{>Patient_sur_nurse}}
+
+      <button type="submit" class="btn btn-primary">Print</button>
+{{/if}}
+
+
+
+
+         {{#if isInRole 'nurse'}}
+
+         <table class="table table-bordered table-hover">
+             <thead>
+               <tr>
+            <th> الأمر</th>
+                 <th>أوقات التنفيذ</th>
+                 <th>متابعة التنفيذ </th>
+
+               </tr>
+             </thead>
+             <tbody>
+                 {{#each medicationtview}}
+                     <tr>
+                       <td>
+                           {{ medication }}
+                       </td>
+                     <td>
+                         {{ medicationComment }}
+                     </td>
+                     <td>
+                      <button type="submit" class="btn btn-primary">Done</button>
+                     </td>
+
+
+                     </tr>
+                 {{/each}}
+             </tbody>
+         </table>
+       	{{/if}}
+
+
+</template>
